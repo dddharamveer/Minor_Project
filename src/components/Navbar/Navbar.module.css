@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+.navbar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    display: grid;
+    justify-content: flex-end;
+    margin: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.links a {
+    display: grid;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    color: #edf2f4;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.links a:hover {
+    color: #f0a400;
+}
+
+.logo {
+
+    font-family: 'Oleo Script', cursive;
+    text-transform: capitalize;
+    color: #F0A500;
+    font-size: 2em;
+    margin: 1em;
+}
+.switchDiv{
+display: grid;
+align-items: center;
+justify-items: center;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 3em;
+    height: 1.5em;
+    background: rgb(228, 228, 228);
+   
+    border-radius: 100px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch:after {
+    content: '';
+    position: absolute;
+    
+    left: .1em;
+    width: 1.5em;
+    height: 1.4em;
+    background: url(./shield.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked+.switch {
+    background: #ffffff;
+}
+
+input:checked+.switch:after {
+    
+    transform: translateX(80%) rotate(180deg);
+  
+
+
+}
+
+.navbar svg{
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .navbar {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+}

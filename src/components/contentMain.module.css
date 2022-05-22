@@ -1,0 +1,50 @@
+.mainDiv {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  justify-content: center;
+  padding: 1em;
+
+
+}
+
+.Button {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.mainDiv p {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  color: white;
+  font-size: 1.5em;
+ 
+
+
+}
+
+
+.file {
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.labelFile {
+
+  position: relative;
+  padding: 1em;
+  border-radius: .3rem;
+  font-size: 1.2rem;
+  background: #f0a400;
+  color: white;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+
+
+}

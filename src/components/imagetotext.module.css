@@ -1,0 +1,38 @@
+.imagetoText {
+    display: grid;
+    transition: all 1s ease;
+    margin: 3em;
+    padding: .5em;
+    border-radius: 7px;
+
+    background-color: white;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1em;
+    font-size: 1.2rem;
+}
+
+.status p {
+    font-family: 'Jost', sans-serif;
+
+}
+.statustext{
+  
+    text-align: right;
+    color:#F0A500;
+}
+
+.getText{
+    display: grid;
+    justify-content: center;
+   
+}
+
+.extractedText{
+    margin: 1em;
+    text-align: center;
+    font-size: 1.2rem;
+}

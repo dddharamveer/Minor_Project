@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Judson';
+  font-style: normal;
+  font-weight: 400;
+  
+}
+body{
+  background-color: #1B1A17;
+  
+}
+
+.fade-enter {
+  transform: scale(0);
+}
+
+.fade-enter-active {
+  animation: myAnim .3s ease 0s 1 normal forwards;
+}
+
+.fade-exit {
+  transform: scale(0);
+}
+
+.fade-exit-active {
+  animation: myAnim .2s ease 0s 1 reverse forwards;
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(0.5);
+	
+	}
+
+	100% {
+		transform: scale(1);
+	
+	}
+}
+
+.slide-enter-active{
+ 
+   
+  animation: slide-in .4s ease forwards;
+  
+}
+.slide-exit-active{
+  
+  animation: slide-in .4s ease forwards reverse;
+  
+  
+}
+
+ @keyframes slide-in {
+  0% {
+    transform: scale(0);
+    transform-origin: 0% 0% ;
+  }
+  100% {
+    transform: scale(1);
+    
+  }
+}
+
+.svgs{
+  background-color: white;
+  
+  
+}
+
+.svgs svg{
+display: block;
+}
+
+
+@media screen and (min-width:450px) {
+  body{
+  
+    background-size: 60%;
+  }
+}

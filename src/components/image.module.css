@@ -1,0 +1,28 @@
+.imageDiv{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0em .5em;
+    padding: .5em 1em .5em 1em ;
+    font-size: 1.2rem;
+    border-radius: 
+    6px;
+    background-color: #E4E4E4;
+    align-items: center;
+    
+}
+p{
+   font-family: 'Jost', sans-serif;
+}
+.img{
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   
+}
+.img img{
+   width: 100%;
+   height: auto;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
