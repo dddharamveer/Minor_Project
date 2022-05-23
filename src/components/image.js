@@ -5,12 +5,14 @@ import AuthContext from "../store/auth-context";
 import classes from "./image.module.css";
 
 const Image = (props) => {
+  const [first, setfirst] = useState(0)
   const ctx = useContext(AuthContext);
   const handleClick = () => {
     Tesseract.recognize(props.dataUrl, "eng", {
       logger: (m) => {
         console.log(m);
-        props.status(m.status)
+        props.status(m);
+        setfirst(m.progress)
       },
     }).then(({ data: { text } }) => {
       props.texte(text);
@@ -21,7 +23,9 @@ const Image = (props) => {
 
   
   if (props.submit) {
+  if(first===0 ){
     handleClick();
+  }
     props.submitset();
   }
 

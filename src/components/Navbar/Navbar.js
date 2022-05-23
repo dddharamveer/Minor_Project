@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 const Navbar = (props) => {
   return (
     <nav className={classes.navbar}>
-      <div className={classes.logo}>multiverse</div>
+      <Link className={classes.logo} to='/'>multiverse</Link>
       <div className={classes.links}>
-        <a>about</a>
+        <Link to="/about">about</Link>
         <a>github</a>
         <div className={classes.switchDiv}>
           <input type="checkbox" id="switch" className={classes.switch} />

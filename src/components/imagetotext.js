@@ -25,18 +25,16 @@ const Imagetotext = (props) => {
     setText(t);
   };
  const statusHandler=(e)=>{
- setstatus(e);
+ setstatus((e.progress.toFixed(2))*100);
  }
-  const [status, setstatus] = useState("unknown")
+  const [status, setstatus] = useState(0)
  
-  if(status==="recognizing text"){
-    setstatus("completed")
-  }
+  
   return (
     <div className={classes.imagetoText}>
       <div className={classes.status}>
         <p>Status</p>
-        <p className={classes.statustext}>{status}</p>
+        <p className={classes.statustext}>{status===1?"completed":status}%</p>
       </div>
       <Image
         dataUrl={dataUrl}

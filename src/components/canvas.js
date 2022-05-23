@@ -1,10 +1,8 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef} from "react";
 import preprocessImage from "../pre";
 import AuthContext from "../store/auth-context";
 import classes from "./canvas.module.css";
-import Button from "./UI/Button";
 const Canvas = (props) => {
-  const [onCanvas, setOnCanvas] = useState(false);
   const ct = useContext(AuthContext);
   const canvasRef = useRef(null);
 
@@ -23,8 +21,9 @@ const Canvas = (props) => {
       props.dataUrl(canvas.toDataURL("image/jpeg"));
     };
   };
+
+  
   const HandleCanvas1 = () => {
-    setOnCanvas((prevState) => !prevState);
     HandleCanvas();
   };
 
@@ -32,7 +31,6 @@ const Canvas = (props) => {
     <div className={classes.canvas}>
       <p onClick={HandleCanvas1}>Processed <br></br>Image</p>
       <canvas ref={canvasRef} className={classes["prep"]}></canvas>
-    
     </div>
   );
 };

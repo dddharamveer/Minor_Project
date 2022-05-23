@@ -1,23 +1,19 @@
-import { useState } from "react";
 
 import Navbar from "./components/Navbar/Navbar";
-import { CSSTransition } from "react-transition-group";
-import Imagetotext from "./components/imagetotext";
-
 import "./App.css";
 
-import ContentMain from "./components/contentMain";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./components/pages/about";
 
 function App() {
-  const [image, setImage] = useState("");
-  const imageUrlHandler = (image) => {
-    setImage(image);
-  };
   return (
     <div className="App">
-    <Navbar/>
-    <ContentMain  urlUpload={imageUrlHandler} />
-    <Imagetotext image={image} />
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About/>}/>
+      </Routes>
     </div>
   );
 }
