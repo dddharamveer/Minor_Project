@@ -8,26 +8,31 @@ const Image = (props) => {
   const [first, setfirst] = useState(0)
   const ctx = useContext(AuthContext);
   const handleClick = () => {
+    props.submitset();
     Tesseract.recognize(props.dataUrl, "eng", {
       logger: (m) => {
         console.log(m);
         props.status(m);
         setfirst(m.progress)
+
       },
     }).then(({ data: { text } }) => {
+      setfirst(0)
       props.texte(text);
       console.log(text);
     });
+
+    
   };
 
 
   
-  if (props.submit) {
-  if(first===0 ){
+ 
+  if(first===0 && props.submit ){
     handleClick();
   }
-    props.submitset();
-  }
+ 
+   
 
   return (
     <div className={classes.imageDiv}>

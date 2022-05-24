@@ -23,6 +23,8 @@
     color: #edf2f4;
     font-size: 1rem;
     align-items: center;
+    text-decoration:none;
+    cursor: none;
 }
 
 .links a:hover {
@@ -30,12 +32,13 @@
 }
 
 .logo {
-
+    cursor: none;
     font-family: 'Oleo Script', cursive;
     text-transform: capitalize;
     color: #F0A500;
     font-size: 2em;
     margin: 1em;
+    text-decoration:none;
 }
 .switchDiv{
 display: grid;
