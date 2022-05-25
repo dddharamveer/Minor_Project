@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
 .navbar {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    grid-template-rows: 1fr 1fr;
 }
 
-.links {
+
+
+/* .links {
     display: grid;
     justify-content: flex-end;
     margin: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     align-items: center;
 }
 
@@ -25,10 +23,35 @@
     align-items: center;
     text-decoration:none;
     cursor: none;
-}
-
+} */
+/* 
 .links a:hover {
     color: #f0a400;
+} */
+.logoDiv{
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+   
+}
+.links{
+
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: flex-end;
+   
+    
+    
+}
+.linksShow{
+    display:grid;
+   
+}
+
+.links a{
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: white;
 }
 
 .logo {
@@ -37,10 +60,20 @@
     text-transform: capitalize;
     color: #F0A500;
     font-size: 2em;
-    margin: 1em;
+    grid-column: 4;
     text-decoration:none;
+    text-align: center;
+}
+
+.mobileIcon{
+    background: url(./ellipsis-vertical-solid.svg);
+   background-repeat: no-repeat;
+   grid-column: 7;
+   background-position:right;
+   fill: white;
 }
 .switchDiv{
+    padding: .5rem 1rem;
 display: grid;
 align-items: center;
 justify-items: center;
@@ -97,20 +130,33 @@ input:checked+.switch:after {
 }
 
 
-
-@media only screen and (max-width: 600px) {
-    .navbar {
-
-        grid-template-columns: 1fr 1fr;
-
+@media screen and (min-width:800px) {
+    .navbar{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: none;
+        padding: 1rem;
+        
     }
-}
+    .logo{
+        grid-area: 1;
+    }
 
-
-@media only screen and (max-width: 400px) {
-    .navbar {
-
-        grid-template-columns: 1fr 1fr;
-
+    .links{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: none;
+        justify-items: center;
+        align-items: center;
+        
+    }
+    .links a{
+        padding: 0rem;
+    }
+    .logoDiv{
+        margin: 1em;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+       
     }
 }
