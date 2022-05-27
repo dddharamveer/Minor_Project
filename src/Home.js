@@ -13,7 +13,7 @@ const Home =(props)=>{
     };
 return  <div>
 <ContentMain  urlUpload={imageUrlHandler} />
-<Imagetotext image={image} />
+{/* <Imagetotext image={image} /> */}
 </div>
 }
 

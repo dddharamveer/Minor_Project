@@ -1,6 +1,6 @@
 .mainDiv {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 20%;
   width: 100%;
   justify-content: center;
   padding: 1em;
@@ -10,15 +10,14 @@
 
 .Button {
   display: grid;
-  justify-content: center;
-  align-items: center;
+  margin: 1em;
+  align-items:center;
 
 }
 
 
 .mainDiv p {
   text-align: center;
-  font-family: 'Jost', sans-serif;
   color: white;
   font-size: 1.5em;
  
@@ -36,15 +35,33 @@
 }
 
 .labelFile {
+ text-align: center;
 
   position: relative;
   padding: 1em;
   border-radius: .3rem;
   font-size: 1.2rem;
-  background: #f0a400;
+  background: #9772FB;
   color: white;
   cursor: pointer;
-  font-family: 'Jost', sans-serif;
+  font-family: "Light1";
 
 
+}
+
+.svgDiv{
+ 
+}
+.svgDiv p{
+  margin:.5em 0em ;
+  font-family: "Light";
+  color:black;
+  font-size: 3rem;
+}
+.svg{
+  background: url(./woolly-hand-with-mobile-phone.png);
+  padding: 8em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

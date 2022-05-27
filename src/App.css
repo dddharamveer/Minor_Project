@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Judson&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost&family=Roboto:ital,wght@1,300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:wght@300;600;800&display=swap');
+
+
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+    src:local("Light"),
+        url("./fonts/LEMONMILK-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Light1";   /*Can be any text*/
+    src:local("Light1"),
+        url("./fonts/LEMONMILK-Light.otf") format("opentype");
+}
 * {
 
   box-sizing: border-box;
@@ -14,8 +23,9 @@
   
 }
 body{
-  background-color: #1B1A17;
-  
+  background-color: #ffffff;
+  background: url(./background.svg);
+  background-size:%;
 }
 
 .fade-enter {

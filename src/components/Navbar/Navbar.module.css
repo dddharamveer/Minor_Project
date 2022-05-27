@@ -2,81 +2,114 @@
 
 .navbar {
     grid-template-rows: 1fr 1fr;
+   
 }
 
-
-
-/* .links {
-    display: grid;
-    justify-content: flex-end;
-    margin: 1rem;
-    grid-template-columns: 1fr 1fr ;
-    align-items: center;
-}
-
-.links a {
-    display: grid;
-    justify-content: center;
-    font-family: 'Jost', sans-serif;
-    color: #edf2f4;
-    font-size: 1rem;
-    align-items: center;
-    text-decoration:none;
-    cursor: none;
-} */
-/* 
-.links a:hover {
-    color: #f0a400;
-} */
-.logoDiv{
+.logoDiv {
+    padding: .5rem;
     margin: 1em;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
-   
-}
-.links{
+    grid-template-columns: repeat(7, 1fr);
 
-    display: none;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: flex-end;
-   
-    
-    
-}
-.linksShow{
-    display:grid;
-   
 }
 
-.links a{
-    padding: .5rem 1rem;
+.links {
+    position: fixed;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+}
+
+.linksList {
+    background-color: #9279d8;
+    width: 80%;
+
+
+}
+
+.linksShow {
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes slide-out-left {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.linksList li {
+    display: grid;
+
+    padding: 1.5rem;
+   
+
+}
+
+.linksList li:hover {
+    background-color: rgba(0, 0, 0, 0.205);
+}
+
+.linksList li a {
     text-decoration: none;
     color: white;
+    text-align: left;
+    font-family: "Light1";
 }
+
 
 .logo {
     cursor: none;
-    font-family: 'Oleo Script', cursive;
-    text-transform: capitalize;
-    color: #F0A500;
+    font-family: 'Lato', sans-serif;
+   
+   text-transform: capitalize;
+    color: #000000;
     font-size: 2em;
     grid-column: 4;
-    text-decoration:none;
+    text-decoration: none;
     text-align: center;
 }
 
-.mobileIcon{
+.mobileIcon {
     background: url(./ellipsis-vertical-solid.svg);
-   background-repeat: no-repeat;
-   grid-column: 7;
-   background-position:right;
-   fill: white;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    grid-column: 1;
+    background-position: center;
+    fill: white;
 }
-.switchDiv{
+
+.switchDiv {
     padding: .5rem 1rem;
-display: grid;
-align-items: center;
-justify-items: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 input[type=checkbox] {
@@ -91,7 +124,7 @@ input[type=checkbox] {
     width: 3em;
     height: 1.5em;
     background: rgb(228, 228, 228);
-   
+
     border-radius: 100px;
     position: relative;
     display: grid;
@@ -102,7 +135,7 @@ input[type=checkbox] {
 .switch:after {
     content: '';
     position: absolute;
-    
+
     left: .1em;
     width: 1.5em;
     height: 1.4em;
@@ -118,45 +151,64 @@ input:checked+.switch {
 }
 
 input:checked+.switch:after {
-    
+
     transform: translateX(80%) rotate(180deg);
-  
+
 
 
 }
 
-.navbar svg{
+.navbar svg {
     width: 100%;
 }
 
 
 @media screen and (min-width:800px) {
-    .navbar{
+    .navbar {
         display: grid;
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: none;
         padding: 1rem;
-        
+
     }
-    .logo{
+
+    .logo {
         grid-area: 1;
     }
 
-    .links{
+    .links {
+        position: unset;
+        background-color: unset;
+        width: unset;
+        opacity: 1;
+        pointer-events: all;
+        animation: unset;
+    }
+
+    .linksList {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: none;
-        justify-items: center;
+
         align-items: center;
-        
+        background-color: unset;
+        width: unset;
     }
-    .links a{
-        padding: 0rem;
+
+    .linksList li {
+        background-color: unset;
+
     }
-    .logoDiv{
+
+
+    .linksList li a {
+        text-align: center;
+        color: black;
+    }
+
+    .logoDiv {
         margin: 1em;
         display: grid;
-        grid-template-columns: repeat(7,1fr);
-       
+        grid-template-columns: repeat(7, 1fr);
+
     }
 }
