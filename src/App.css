@@ -28,10 +28,11 @@ html{
 body{
   
   background: url(./background.svg);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #ffffff;
   min-height: 100vh;
+
   
 }
 
