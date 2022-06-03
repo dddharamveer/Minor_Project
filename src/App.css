@@ -12,6 +12,11 @@
     src:local("Light1"),
         url("./fonts/LEMONMILK-Light.otf") format("opentype");
 }
+@font-face {
+  font-family: "main";   /*Can be any text*/
+    src:local("main"),
+        url("./fonts/BebasNeue-Regular.otf") format("opentype");
+}
 * {
 
   box-sizing: border-box;
@@ -27,9 +32,7 @@ html{
 }
 body{
   
-  background: url(./background.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
+
   background-color: #ffffff;
   min-height: 100vh;
 
@@ -101,9 +104,6 @@ display: block;
 @media screen and (min-width:450px) {
   body{
   
-  background: url(./bigbg.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
+ 
   }
 }

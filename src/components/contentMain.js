@@ -6,7 +6,7 @@ const ContentMain = (props) => {
   return (
     <div className={classes.mainDiv}>
       <div className={classes.svgDiv} >
-        <p>Convert Images <br/> to <br/>Text</p>
+        <p>Convert Images <br/> to <br/><span className={classes.highlight}>Text</span></p>
         <div className={classes.svg}></div>
       </div>
       <div className={classes.Button}>

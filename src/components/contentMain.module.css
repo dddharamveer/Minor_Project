@@ -10,7 +10,7 @@
 
 .Button {
   display: grid;
-  margin: 1em;
+  margin:3em 1em 0em 1em;
   align-items:center;
 
 }
@@ -53,13 +53,31 @@
  
 }
 .svgDiv p{
-  margin:.5em 0em ;
+  margin:1em 0em 1.5em 0em;
   font-family: "Light";
   color:black;
   font-size: 3rem;
+
+}
+.highlight{
+  position: relative;
+ 
+}
+
+.highlight::before{
+  background-color:  #bba5f9;
+
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: 60%;
+  left: -2px;
+  bottom: 0;
+  z-index: -1;
+  transform: rotate(-2deg);
 }
 .svg{
-  background: url(./woolly-hand-with-mobile-phone.png);
+  background: url(./contentMain.svg);
   padding: 8em;
   background-position: center;
   background-size: contain;
