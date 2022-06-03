@@ -5,6 +5,7 @@ import Canvas from "./canvas";
 import AuthContext from "../store/auth-context";
 import Button from "./UI/Button";
 import { recognize } from "tesseract.js";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Imagetotext = (props) => {
   const [canvas, setCanvas] = useState(false);
@@ -31,7 +32,13 @@ const Imagetotext = (props) => {
  
   
   return (
-    <div className={classes.imagetoText}>
+    <AnimatePresence >
+    <motion.div 
+    initial={{ x: window.innerWidth}}
+    animate={{ x: 0 }}
+    
+    
+    className={classes.imagetoText}>
       <div className={classes.status}>
         <p>Status</p>
         <p className={classes.statustext}>{status===1?"completed":status}%</p>
@@ -50,7 +57,8 @@ const Imagetotext = (props) => {
         </Button>
       </div>
       <p className={classes.extractedText}>{text?text:"Sample Text here"}</p>
-    </div>
+    </motion.div>
+    </AnimatePresence>
   );
 };
 

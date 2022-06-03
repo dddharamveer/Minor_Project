@@ -22,13 +22,18 @@
 .statustext{
   
     text-align: right;
-    color:#F0A500;
+    color:#9772FB;
 }
 
 .getText{
     display: grid;
     justify-content: center;
+
    
+}
+
+.getText button{
+    background-color: #9772FB;
 }
 
 .extractedText{
