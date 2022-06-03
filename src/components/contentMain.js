@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import AuthContext from "../store/auth-context";
 import classes from "./contentMain.module.css";
+import { Link } from "react-router-dom";
 const ContentMain = (props) => {
+  
   const ctx = useContext(AuthContext);
   return (
     <div className={classes.mainDiv}>
@@ -18,9 +20,10 @@ const ContentMain = (props) => {
           accept="image/*"
         />
         <label htmlFor="file1" className={classes.labelFile}>
-          Select file
+           Select file
         </label>
       </div>
+      <Link className={classes.next}to="/text">Next</Link>
     </div>
   );
 };

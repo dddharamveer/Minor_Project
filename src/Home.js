@@ -18,7 +18,6 @@ animate={{opacity:1}}
 exit={{opacity:0}}
 >
 <ContentMain  urlUpload={imageUrlHandler} />
-{/* <Imagetotext image={image} /> */}
 </motion.div>
 }
 

@@ -1,6 +1,6 @@
 .mainDiv {
   display: grid;
-  grid-template-rows: 1fr 20%;
+  grid-template-rows: 1fr 10% 10%;
   width: 100%;
   justify-content: center;
   padding: 1em;
@@ -10,8 +10,9 @@
 
 .Button {
   display: grid;
-  margin:3em 1em 0em 1em;
+  margin:1em 1em 1em 1em ;
   align-items:center;
+  
 
 }
 
@@ -38,15 +39,27 @@
  text-align: center;
 
   position: relative;
-  padding: 1em;
-  border-radius: .3rem;
+  
+
   font-size: 1.2rem;
-  background: #9772FB;
-  color: white;
+  
+  color: black;
   cursor: pointer;
-  font-family: "Light1";
+  text-decoration: underline;
 
 
+}
+
+.next{
+  display: grid;
+  text-align: center;
+  justify-self: center;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  width: 80%;
+  padding: 1em;
+  background-color: #9772FB;
 }
 
 .svgDiv{
