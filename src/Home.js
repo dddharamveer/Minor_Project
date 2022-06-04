@@ -13,9 +13,9 @@ const Home =(props)=>{
       setImage(image);
     };
 return  <motion.div
-initial={{opacity:0}}
-animate={{opacity:1}}
-exit={{opacity:0}}
+initial={{ x: window.innerWidth}}
+animate={{ x: 0 }}
+exit={{x:window.innerWidth,transition:{duration:0.1}}}
 >
 <ContentMain  urlUpload={imageUrlHandler} />
 </motion.div>

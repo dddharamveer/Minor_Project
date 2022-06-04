@@ -7,9 +7,9 @@ const About = (props) => {
       
       <motion.div
         className={classes.about}
-        initial={{ x: -window.innerWidth, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: window.innerWidth, opacity: 0 }}
+        initial={{ x: window.innerWidth}}
+        animate={{ x: 0 }}
+        exit={{x:window.innerWidth,transition:{duration:0.1}}}
       >
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum,

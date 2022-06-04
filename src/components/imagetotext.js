@@ -32,10 +32,11 @@ const Imagetotext = (props) => {
  
   
   return (
-    <AnimatePresence >
+    
     <motion.div 
     initial={{ x: window.innerWidth}}
     animate={{ x: 0 }}
+    exit={{x:window.innerWidth,transition:{duration:0.1}}}
     
     
     className={classes.imagetoText}>
@@ -58,7 +59,7 @@ const Imagetotext = (props) => {
       </div>
       <p className={classes.extractedText}>{text?text:"Sample Text here"}</p>
     </motion.div>
-    </AnimatePresence>
+    
   );
 };
 
