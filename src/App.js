@@ -9,6 +9,7 @@ import Imagetotext from "./components/imagetotext";
 import { useContext } from "react";
 import AuthContext from "./store/auth-context";
 import { AnimatePresence } from "framer-motion";
+import NothingFound from "./components/pages/NothingFound";
 
 function App() {
   const location =useLocation()
@@ -20,7 +21,7 @@ function App() {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}/>
-        {ctx.image && <Route path='/text'  element={<Imagetotext/>}/>}
+        { <Route path='/text'  element={ctx.image ?<Imagetotext/>:<NothingFound/>}/>}
         
       </Routes>
       </AnimatePresence>

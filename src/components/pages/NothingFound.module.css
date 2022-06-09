@@ -1,0 +1,29 @@
+.NothingFound{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
+}
+
+.NothingFound p{
+    position: relative;
+    font-size: 1.5rem;
+    font-family: "Light";
+    color:black;
+    font-size: 3rem;
+}
+
+
+  
+  .NothingFound p::before{
+    background-color:  #bba5f9;
+  
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }

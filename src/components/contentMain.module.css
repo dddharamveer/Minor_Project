@@ -4,6 +4,7 @@
   width: 100%;
   justify-content: center;
   padding: 1em;
+  margin-bottom: 1.5em;
 
 
 }
@@ -61,7 +62,8 @@
   font-size: 1.2rem;
   padding: 1em;
   background-color: #9772FB;
-  border-radius: 20px;
+  border-radius: 10px;
+ 
 }
 
 .svgDiv{
