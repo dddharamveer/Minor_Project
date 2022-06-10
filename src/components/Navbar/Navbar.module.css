@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
 .navbar {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
    
 }
 
@@ -12,7 +12,16 @@
     grid-template-columns: repeat(7, 1fr);
 
 }
-
+.textList{
+    background: url(./list.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-column: 7;
+    align-items: center;
+    justify-items: center;
+}
 .links {
     position: fixed;
     display: grid;
@@ -163,6 +172,9 @@ input:checked+.switch:after {
 }
 
 
+
+
+
 @media screen and (min-width:800px) {
     .navbar {
         display: grid;
@@ -208,7 +220,7 @@ input:checked+.switch:after {
     .logoDiv {
         margin: 1em;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        
 
     }
 }

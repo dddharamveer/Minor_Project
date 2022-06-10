@@ -41,3 +41,18 @@
     text-align: center;
     font-size: 1.2rem;
 }
+
+.textDiv{
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.textDiv button{
+    background-color: #9772FB;
+    border: none;
+    color :white;
+    border-radius: .4em;
+}

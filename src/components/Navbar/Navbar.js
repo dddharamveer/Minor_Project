@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import SaveText from "../pages/SaveText";
 import classes from "./Navbar.module.css";
-
+import {AnimatePresence} from "framer-motion"
 const Navbar = (props) => {
   const [menuButton, setMenuButton] = useState(false);
   const [innerWidth, setinnerWidth] = useState(window.innerWidth);
+  const [textList, setTextList] = useState(false)
 
   const innerHandler = () => {
     setinnerWidth(window.innerWidth);
@@ -17,6 +19,10 @@ const Navbar = (props) => {
   if (menuButton && innerWidth < 800) {
     links = classes["linksShow"];
   }
+  
+  const textlistHandler=()=>{
+   setTextList(prev=>!prev)
+  }
   return (
     <nav className={classes.navbar}>
       <div className={classes["logoDiv"]}>
@@ -26,7 +32,12 @@ const Navbar = (props) => {
         <Link className={classes.logo} to="/">
           studio
         </Link>
+        <div className={classes.textList}onClick={textlistHandler}></div>
+      
       </div>
+     <AnimatePresence>
+      {textList &&  <SaveText close={textlistHandler}/>}
+      </AnimatePresence>
       <div className={`${classes.links} ${links}` } onClick={HandleMobileButton}>
         <ul className={classes.linksList}>
           <li>
@@ -35,6 +46,7 @@ const Navbar = (props) => {
           <li>
             <Link to="/">githib</Link>
           </li>
+          
           {/* <li>
             <div className={classes.switchDiv}>
               <input type="checkbox" id="switch" className={classes.switch} />

@@ -10,6 +10,7 @@ import { useContext } from "react";
 import AuthContext from "./store/auth-context";
 import { AnimatePresence } from "framer-motion";
 import NothingFound from "./components/pages/NothingFound";
+import SaveText from "./components/pages/SaveText";
 
 function App() {
   const location =useLocation()
@@ -22,7 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}/>
         { <Route path='/text'  element={ctx.image ?<Imagetotext/>:<NothingFound/>}/>}
-        
+       
       </Routes>
       </AnimatePresence>
     </div>

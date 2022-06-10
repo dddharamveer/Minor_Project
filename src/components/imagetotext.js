@@ -20,11 +20,9 @@ const Imagetotext = (props) => {
     setSubmit((prevState) => !prevState);
   };
 
-  const [text, setText] = useState("");
+
   const ctx = useContext(AuthContext);
-  const textHandler = (t) => {
-    setText(t);
-  };
+ 
  const statusHandler=(e)=>{
  setstatus((e.progress.toFixed(2))*100);
  }
@@ -47,7 +45,7 @@ const Imagetotext = (props) => {
       <Image
         dataUrl={dataUrl}
         submit={submit}
-        texte={textHandler}
+        texte={ctx.textHandler}
         submitset={SubmitHandler}
         status={statusHandler}
       />
@@ -57,7 +55,12 @@ const Imagetotext = (props) => {
           Get text
         </Button>
       </div>
-      <p className={classes.extractedText}>{text?text:"Sample Text here"}</p>
+      <div className={classes.textDiv}>
+      <p className={classes.extractedText}>{ctx.text?ctx.text:"Sample Text here"}</p>
+      <button onClick={ctx.textlistHandler}>save</button>
+
+      </div>
+     
     </motion.div>
     
   );
