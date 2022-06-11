@@ -18,7 +18,7 @@ const SaveText = (props) => {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <div className={classes.navbar} onClick={props.close}>
-      
+      <p>Lists</p>
       <div className={classes.svg}></div>
 
       </div>

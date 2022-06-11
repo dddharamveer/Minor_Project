@@ -3,7 +3,7 @@
   grid-template-rows: 1fr 10% 10%;
   width: 100%;
   justify-content: center;
-  padding: 1em;
+ 
   margin-bottom: 1.5em;
 
 
@@ -11,9 +11,9 @@
 
 .Button {
   display: grid;
-  margin:1em 1em 1em 1em ;
-  align-items:center;
-  
+  margin: 1em 1em 1em 1em;
+  align-items: center;
+
 
 }
 
@@ -22,7 +22,7 @@
   text-align: center;
   color: white;
   font-size: 1.5em;
- 
+
 
 
 }
@@ -37,13 +37,13 @@
 }
 
 .labelFile {
- text-align: center;
+  text-align: center;
 
   position: relative;
-  
+
 
   font-size: 1.2rem;
-  
+
   color: black;
   cursor: pointer;
   text-decoration: underline;
@@ -51,7 +51,7 @@
 
 }
 
-.next{
+.next {
   display: grid;
   text-align: center;
   justify-self: center;
@@ -63,26 +63,26 @@
   padding: 1em;
   background-color: #9772FB;
   border-radius: 10px;
- 
+
 }
 
-.svgDiv{
- 
-}
-.svgDiv p{
-  margin:1em 0em 1.5em 0em;
+.svgDiv {}
+
+.svgDiv p {
+  margin:.4em 0em 1em 0em;
   font-family: "Light";
-  color:black;
-  font-size: 3rem;
+  color: black;
+  font-size: 2.5rem;
 
 }
-.highlight{
+
+.highlight {
   position: relative;
- 
+
 }
 
-.highlight::before{
-  background-color:  #bba5f9;
+.highlight::before {
+  background-color: #bba5f9;
 
   content: "";
   position: absolute;
@@ -93,10 +93,12 @@
   z-index: -1;
   transform: rotate(-2deg);
 }
-.svg{
+
+.svg {
   background: url(./contentMain.svg);
-  padding: 8em;
+  padding: 7em;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+ margin-bottom: 1em;
 }

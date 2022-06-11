@@ -11,11 +11,13 @@ import AuthContext from "./store/auth-context";
 import { AnimatePresence } from "framer-motion";
 import NothingFound from "./components/pages/NothingFound";
 import SaveText from "./components/pages/SaveText";
+import ImageModal from "./components/imageandpreimg";
 
 function App() {
   const location =useLocation()
   const ctx = useContext(AuthContext)
   return (
+    
     <div className="App">
       <Navbar/>
       <AnimatePresence exitBeforeEnter>

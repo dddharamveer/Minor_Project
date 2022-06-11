@@ -8,7 +8,7 @@ const ContentMain = (props) => {
   return (
     <div className={classes.mainDiv}>
       <div className={classes.svgDiv} >
-        <p>Convert Images <br/> to <br/><span className={classes.highlight}>Text</span></p>
+        <p>Convert <br/>Images <br/> to <br/><span className={classes.highlight}>Text</span></p>
         <div className={classes.svg}></div>
       </div>
       <div className={classes.Button}>
@@ -23,7 +23,7 @@ const ContentMain = (props) => {
            Select file
         </label>
       </div>
-      <Link className={classes.next}to="/text">Next</Link>
+      <Link className={classes.next}to="/text">Get Started</Link>
     </div>
   );
 };

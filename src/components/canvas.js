@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useContext, useRef} from "react";
 import preprocessImage from "../pre";
 import AuthContext from "../store/auth-context";
@@ -23,13 +24,14 @@ const Canvas = (props) => {
   };
 
   
-  const HandleCanvas1 = () => {
-    HandleCanvas();
-  };
-
+  
+  useEffect(() => {
+    HandleCanvas()
+  }, [props.submit===true])
+  
   return (
     <div className={classes.canvas}>
-      <p onClick={HandleCanvas1}>Processed <br></br>Image</p>
+      <p >Processed <br></br>Image</p>
       <canvas ref={canvasRef} className={classes["prep"]}></canvas>
     </div>
   );

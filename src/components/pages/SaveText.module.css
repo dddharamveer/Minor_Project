@@ -1,27 +1,33 @@
-.text{
-position: fixed;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@600&display=swap');
 
-background-color: white;
-height: 100vh;
-width: 100%;
-top:0;
-
-z-index: 1000;
+.text {
+    position: fixed;
+    background-color: hsl(264, 8%, 88%);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 
-.navbar{
+.navbar {
     display: grid;
-    justify-items: right;
-    padding: 1.5em;
+    justify-items: center;
+    padding: 1.5em 1.5em 0 1.5em;
     align-items: center;
-   
+    grid-template-columns: repeat(7, 1fr);
+
 
 }
 
-.svg{
-   background: url(./close.svg);
-   padding: .5em;
-   background-size:contain;
+.navbar p {
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 2rem;
 }
 
+.svg {
+    background: url(./close.svg);
+    padding: .5em;
+    background-size: contain;
+    grid-column: 7;
+}
