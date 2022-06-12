@@ -1,31 +1,25 @@
 
-import Navbar from "./components/Navbar/Navbar";
-import "./App.css";
 
-import { Routes, Route ,useLocation} from "react-router-dom";
-import Home from "./Home";
-import About from "./components/pages/about";
-import Imagetotext from "./components/imagetotext";
-import { useContext } from "react";
-import AuthContext from "./store/auth-context";
+import "./App.css";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { useContext } from "react";
 import NothingFound from "./components/pages/NothingFound";
-import SaveText from "./components/pages/SaveText";
-import ImageModal from "./components/imageandpreimg";
+import NavRoute from "./Routes/NavRoute";
+
+import Imagetotext from "./components/imagetotext";
+import AuthContext from "./store/auth-context";
 
 function App() {
-  const location =useLocation()
   const ctx = useContext(AuthContext)
+  const location = useLocation();
   return (
     
     <div className="App">
-      <Navbar/>
-      <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>}/>
-        { <Route path='/text'  element={ctx.image ?<Imagetotext/>:<NothingFound/>}/>}
-       
+        <Route path="*" element={<NavRoute/>}/>
+        <Route path='/text'element={ctx.image?<Imagetotext/>:<NothingFound/>}/>
       </Routes>
       </AnimatePresence>
     </div>

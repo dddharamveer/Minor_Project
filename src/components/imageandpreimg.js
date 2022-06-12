@@ -1,27 +1,20 @@
 import {useContext, useState } from "react";
-import Canvas from "./canvas"
-import Image from "./image"
+
+
 import AuthContext from "../store/auth-context";
+import classes from './imageandpreimg.module.css'
 
 
 const ImageModal=(props)=>{
    
     const ctx = useContext(AuthContext);
    
-    const [dataUrl, setDataUrl] = useState(null);
-    const DataUrlHandler = (dataUrl) => {
-        setDataUrl(dataUrl);
-      };
-    
-    return<div>
-    <Image
-    dataUrl={dataUrl}
-    submit={props.submit}
-    texte={ctx.textHandler}
-    submitset={props.SubmitHandler}
-    status={props.status}
-  />
-   <Canvas preprocess={props.submit} dataUrl={DataUrlHandler} submit={props.submit} />
+    return<div className={classes.inside}>
+        <img
+          src={ctx.image && URL.createObjectURL(ctx.image)}
+          className={classes.img}
+        />
+ <img src={props.dataUrl} alt="" />
   </div>
 }
 

@@ -1,3 +1,5 @@
+
+
 import { useEffect } from "react";
 import { useContext, useRef} from "react";
 import preprocessImage from "../pre";
@@ -30,10 +32,7 @@ const Canvas = (props) => {
   }, [props.submit===true])
   
   return (
-    <div className={classes.canvas}>
-      <p >Processed <br></br>Image</p>
-      <canvas ref={canvasRef} className={classes["prep"]}></canvas>
-    </div>
+      <canvas ref={canvasRef}  hidden={true} className={classes["prep"]}></canvas>
   );
 };
 

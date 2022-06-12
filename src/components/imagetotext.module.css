@@ -1,7 +1,7 @@
 .imagetoText {
     display: grid;
     transition: all 1s ease;
-    margin: 3em;
+    margin: 1em;
     padding: .5em;
     border-radius: 7px;
 
@@ -55,4 +55,33 @@
     border: none;
     color :white;
     border-radius: .4em;
+}
+
+.navbar{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.backbutton{
+    grid-column: 1;
+    padding: .5em;
+    border-radius: 50%;
+   
+    background:url(./left-arrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.info{
+    display:grid;
+justify-items: center;
+    align-items: center;
+    grid-column: 7;
+    width: 100%;
+    padding: 1em;
+    background-color: hsl(256, 94%, 95%);
+    border-radius: 50%;
 }
