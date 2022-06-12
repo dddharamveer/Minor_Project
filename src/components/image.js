@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 
-import Tesseract from "tesseract.js";
 import AuthContext from "../store/auth-context";
 import classes from "./image.module.css";
 
