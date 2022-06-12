@@ -1,0 +1,40 @@
+.inside{
+    position: fixed;
+    min-height: 100vh;
+    display: grid;
+    top:0;
+    left: 0;
+   
+    background-color:#DBDFFD;
+    
+    width: 100%;
+
+}
+.insideDiv{
+    display: grid;
+    align-self: center;
+    justify-self: center;
+ 
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.mainImage p{
+    text-align: center;
+    background-color: hsl(257, 47%, 94%);
+    font-family: 'Poppins', sans-serif;
+    padding: .5em 1.5em;
+    color: #6c37fe;
+    border-radius: 2.1em;
+    margin: 1em;
+
+}
+.mainImage img{
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

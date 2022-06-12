@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@400;500&family=Poppins:wght@300&display=swap');
+
 .imagetoText {
+    
     display: grid;
     transition: all 1s ease;
     margin: 1em;
@@ -19,69 +22,163 @@
     font-family: 'Jost', sans-serif;
 
 }
-.statustext{
-  
+
+.statustext {
+
     text-align: right;
-    color:#9772FB;
+    color: #9772FB;
 }
 
-.getText{
+
+
+
+
+
+
+
+.navbar {
     display: grid;
-    justify-content: center;
-
-   
-}
-
-.getText button{
-    background-color: #9772FB;
-}
-
-.extractedText{
-    margin: 1em;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.textDiv{
-    margin: 1em;
-    display: grid;
-    grid-template-columns: 1fr 20%;
-    border: 1px solid black;
-    padding: 1em;
-}
-
-.textDiv button{
-    background-color: #9772FB;
-    border: none;
-    color :white;
-    border-radius: .4em;
-}
-
-.navbar{
-    display:grid;
-    grid-template-columns: repeat(7,1fr);
-    justify-items: center;
+    grid-template-rows: 20% 30% 1fr;
+    justify-items: left;
     align-items: center;
+    margin-bottom: 2em;
 }
 
-.backbutton{
-    grid-column: 1;
+.backbutton {
+    margin-top: 1em;
     padding: .5em;
     border-radius: 50%;
-   
-    background:url(./left-arrow.png);
+
+    background: url(./left-arrow.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.info{
-    display:grid;
-justify-items: center;
-    align-items: center;
-    grid-column: 7;
-    width: 100%;
+.navNumber {
+   
+    background-color: hsl(257, 47%, 94%);
+    font-family: 'Poppins', sans-serif;
+    padding: .5em 1.5em;
+    color: #6c37fe;
+    border-radius: 2.1em;
+}
+.mainNavNumber{
+    margin-top: 1em;
+}
+
+
+
+.navText {
+
+    margin-top: .3em;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 2.1em;
+
+}
+
+.getText {
+    display: grid;
+   
+
+
+}
+
+
+.getTextButton {
+   width: 40%;
+   justify-self: left;
+   padding: 1em;
+    border: none;
+    border-radius: 2em;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    color: #9772FB;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+}
+
+.textDiv {
+    margin-top: 1em;
+    display: grid;
+ 
+    grid-template-rows: auto 1fr auto; 
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     padding: 1em;
-    background-color: hsl(256, 94%, 95%);
+    min-height: 6em;
+    border-radius: .5em;
+}
+.textDiv .navbar{
+    display: grid;
+    align-items: center;
+}
+.textDivNavbar{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+.getTextNavNumber{
+    text-align: center;
+}
+
+.extractedText {
+    padding: .5em;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.convertMore{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 2em;
+    padding: .8em;
+    width: 80%;
+}
+
+.convertMore button{
+    font-size: 1rem;
+    border:none;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.convertMore button:nth-of-type(1){
+    width: 100%;
+    border-right: #6c37fe solid 1px;
+}
+
+.imagesModal{
+    position: fixed;
+    bottom:1em;
+    display: grid;
+    justify-self: center;
+    padding: 2em;
+    height: 1em;
+    width: 1em;
     border-radius: 50%;
+    background-color: #6c37fe;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    
+}
+.imagesModal p{
+  position: absolute;
+
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  padding: .8em;
+  background: url(./image.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color:white;
 }
