@@ -1,12 +1,12 @@
 .inside{
-    position: fixed;
+    position: absolute;
     min-height: 100vh;
     display: grid;
     top:0;
     left: 0;
    
     background-color:#DBDFFD;
-    
+    overflow: scroll;
     width: 100%;
 
 }

@@ -56,12 +56,34 @@ const Imagetotext = (props) => {
     handleClick();
   }
   
-
+  const  variants = {
+    
+    open:{
+      opacity:1,
+      transition: {
+        ease: "anticipate",
+        duration:.5,
+      
+      }
+    }
+  ,
+    closed: {
+      opacity:0,
+      transition: {
+        ease: "anticipate",
+        duration:.4
+        
+       
+      }
+    }
+  }
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      initial={"closed"}
+      animate={"open"}
+      exit={"closed"}
+      
+      variants={variants}
       className={classes.imagetoText}
     >
       {/* <div className={classes.status}>

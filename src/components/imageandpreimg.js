@@ -9,10 +9,10 @@ const ImageModal = (props) => {
   const sidebar = {
     
     open:{
-      clipPath: "circle(100vh at 50% 95%)",
+      clipPath: "circle(200% at 50% 95%)",
       transition: {
         ease: "linear",
-        duration:.5
+        duration:.4
       }
     }
   ,
@@ -26,6 +26,7 @@ const ImageModal = (props) => {
       }
     }
   }
+
 
 
   return (

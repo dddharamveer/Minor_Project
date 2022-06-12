@@ -4,10 +4,11 @@
     
     display: grid;
     transition: all 1s ease;
+    grid-template-rows: 1fr 1fr 1fr;
     margin: 1em;
     padding: .5em;
     border-radius: 7px;
-
+    min-height: 100vh;
     background-color: white;
 }
 
