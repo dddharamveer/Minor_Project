@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useContext, useRef} from "react";
-import preprocessImage from "../../pre";
+import preprocessImage from "../../preprocessingImage";
 import AuthContext from "../../store/auth-context";
 const Canvas = (props) => {
   const ct = useContext(AuthContext);

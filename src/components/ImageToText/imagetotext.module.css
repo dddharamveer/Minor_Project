@@ -63,6 +63,7 @@
 
 
 .getTextButton {
+    cursor: pointer;
    width: 70%;
    justify-self: left;
   padding: 1em;
@@ -73,10 +74,13 @@
     font-weight: bolder;
     color: #9772FB;
     font-size: 1rem;
+   
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
 }
-
+.getTextButton:hover{
+    box-shadow: #9772FB 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
 .textDiv {
     margin: 1em 0 7em 0;
     display: grid;
@@ -96,6 +100,7 @@
     grid-template-columns: repeat(7,1fr);
 }
 .getTextNavNumber{
+   cursor: pointer;
     text-align: center;
 }
 
@@ -127,12 +132,20 @@
     border:none;
     background-color: white;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all ease 1s;
 }
 
+.convertMore button:hover,.AddMore:hover{
+color: #6c37fe;
+font-weight: bolder;
+}
 .convertMore button{
     width: 100%;
     border-right: #6c37fe solid 1px;
 }
+
+
 
 .imagesModal{
     position: fixed;
@@ -159,6 +172,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   color:white;
+
 }
 
 @media screen and (min-width:800px){
@@ -183,6 +197,10 @@
         grid-template-columns: unset;
         grid-row-start: 2;
         grid-row-end: 3;
+      
+    
+    justify-items:center;
+    align-items: flex-start;
     }
     .getTextButton{
         justify-self: center;
