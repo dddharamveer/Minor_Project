@@ -1,7 +1,6 @@
 import { useContext, useState,useRef } from "react";
-import { useDimensions } from "./use-dimensions";
 
-import AuthContext from "../store/auth-context";
+import AuthContext from "../../store/auth-context";
 import classes from "./imageandpreimg.module.css";
 import {motion} from 'framer-motion'
 const ImageModal = (props) => {

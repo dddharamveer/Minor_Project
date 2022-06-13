@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SaveText from "../pages/SaveText";
+import SaveText from "../pages/SavedText/SaveText";
 import classes from "./Navbar.module.css";
 import { AnimatePresence } from "framer-motion";
 const Navbar = (props) => {

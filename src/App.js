@@ -7,7 +7,7 @@ import { useContext } from "react";
 import NothingFound from "./components/pages/NothingFound";
 import NavRoute from "./Routes/NavRoute";
 
-import Imagetotext from "./components/imagetotext";
+import Imagetotext from "./components/ImageToText/imagetotext";
 import AuthContext from "./store/auth-context";
 
 function App() {

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AuthContext from "../store/auth-context";
+import AuthContext from "../../../store/auth-context";
 import classes from "./contentMain.module.css";
 import { Link } from "react-router-dom";
 const ContentMain = (props) => {

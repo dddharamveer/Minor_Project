@@ -2,9 +2,8 @@
 
 import { useEffect } from "react";
 import { useContext, useRef} from "react";
-import preprocessImage from "../pre";
-import AuthContext from "../store/auth-context";
-import classes from "./canvas.module.css";
+import preprocessImage from "../../pre";
+import AuthContext from "../../store/auth-context";
 const Canvas = (props) => {
   const ct = useContext(AuthContext);
   const canvasRef = useRef(null);
@@ -32,7 +31,7 @@ const Canvas = (props) => {
   }, [props.submit===true])
   
   return (
-      <canvas ref={canvasRef}  hidden={true} className={classes["prep"]}></canvas>
+      <canvas ref={canvasRef}  hidden={true} ></canvas>
   );
 };
 

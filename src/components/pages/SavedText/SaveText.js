@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useContext } from "react";
-import AuthContext from "../../store/auth-context";
+import AuthContext from "../../../store/auth-context";
 import ListSaveText from "./ListSaveText";
 import classes from "./SaveText.module.css";
 

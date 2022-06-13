@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import Home from "../Home";
+import Home from "../components/pages/Homepage/Home";
 import Navbar from "../components/Navbar/Navbar";
 import About from "../components/pages/about";
 

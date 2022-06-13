@@ -124,51 +124,7 @@
     justify-items: center;
 }
 
-input[type=checkbox] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
 
-.switch {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 3em;
-    height: 1.5em;
-    background: rgb(228, 228, 228);
-
-    border-radius: 100px;
-    position: relative;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.switch:after {
-    content: '';
-    position: absolute;
-
-    left: .1em;
-    width: 1.5em;
-    height: 1.4em;
-    background: url(./shield.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-input:checked+.switch {
-    background: #ffffff;
-}
-
-input:checked+.switch:after {
-
-    transform: translateX(80%) rotate(180deg);
-
-
-
-}
 
 .navbar svg {
     width: 100%;
@@ -230,8 +186,11 @@ input:checked+.switch:after {
     }
 
     .linksList p:hover {
-        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
+
+
+
 
 
     .linksList .RouteLink {

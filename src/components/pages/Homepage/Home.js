@@ -1,5 +1,5 @@
 
-import ContentMain from "./components/contentMain";
+import ContentMain from "./contentMain";
 
 
 import { CSSTransition } from "react-transition-group";
