@@ -10,9 +10,7 @@ import ImageModal from "./imageandpreimg";
 
 const Imagetotext = (props) => {
 
-  let textlist = JSON.parse(localStorage.getItem("text"))
-  ? JSON.parse(localStorage.getItem("text"))
-  : 0;
+  
 
   const ctx = useContext(AuthContext);
   const navigate = useNavigate();
@@ -111,7 +109,7 @@ const Imagetotext = (props) => {
        
         </div>
         
-        <p className={`${classes.navNumber} ${classes.mainNavNumber}`}>Saved - {textlist.numbers.length}</p>
+        <p className={`${classes.navNumber} ${classes.mainNavNumber}`}>Saved - {}</p>
         <p className={classes.navText}>Convert Images to text</p>
        
       </div>

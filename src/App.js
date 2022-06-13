@@ -19,7 +19,7 @@ function App() {
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
         <Route path="*" element={<NavRoute/>}/>
-        <Route path='/text'element={ctx.image?<Imagetotext/>:<NothingFound/>}/>
+        <Route path='/text'  element={ctx.image?<Imagetotext/>:<NothingFound/>}/>
       </Routes>
       </AnimatePresence>
     </div>
