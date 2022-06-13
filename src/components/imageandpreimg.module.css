@@ -38,3 +38,10 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+@media screen and (min-width:800px){
+    
+    .insideDiv{
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -160,3 +160,43 @@
   background-repeat: no-repeat;
   color:white;
 }
+
+@media screen and (min-width:800px){
+    .imagetoText{
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
+        
+    }
+    .textDiv{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .navbar{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-items: unset;
+        align-items: center;
+    }
+
+    .midDiv{
+        grid-template-rows:1fr 1fr;
+        grid-template-columns: unset;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .getTextButton{
+        justify-self: center;
+        align-self:flex-start;
+    }
+    .navText{
+       text-align: center;
+       
+      
+    }
+    .backbutton{
+        justify-self: left;
+    }
+    .mainNavNumber{
+        justify-self: left;
+    }
+}

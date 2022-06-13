@@ -54,6 +54,7 @@
 }
 
 .next {
+  margin-top: 1em;
   font-family: 'Poppins', sans-serif;
   display: grid;
   text-align: center;
@@ -65,7 +66,7 @@
   font-size: 1.2rem;
   padding: 1em;
   background-color: #9772FB;
-  
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
 
@@ -106,6 +107,9 @@
   background-repeat: no-repeat;
  margin-bottom: 1em;
 }
+.clock{
+  display: none;
+}
 
 @media screen and (min-width:800px) {
   .mainDiv {
@@ -130,5 +134,20 @@
   }
   .Button{
     grid-template-columns: 1fr 1fr;
+  }
+  .clock{
+    display: grid;
+    background: url(./undraw_optimize_image_re_3tb1.svg);
+    background-size: contain;
+    
+    background-repeat:no-repeat;
+    background-position: left;
+  }
+}
+
+@media screen and (min-width:1500px){
+  .clock{
+   margin-left:8em ;
+   
   }
 }

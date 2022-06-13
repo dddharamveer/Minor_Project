@@ -30,9 +30,9 @@ const Navbar = (props) => {
           <p onClick={HandleMobileButton} className={classes.mobileIcon}></p>
         )}
         <Link className={classes.logo} to="/">
-          gminacs
+          Project
         </Link>
-        <div className={classes.textList} onClick={textlistHandler}></div>
+        {innerWidth < 800 && <div className={classes.textList} onClick={textlistHandler}></div>}
       </div>
 
       <div className={`${classes.links} ${links}`} onClick={HandleMobileButton}>
@@ -44,6 +44,7 @@ const Navbar = (props) => {
           <Link className={classes.RouteLink} to="/">
             github
           </Link>
+          {innerWidth > 800 && <p  onClick={textlistHandler}>Saved Text</p>}
         </ul>
         
       </div>

@@ -8,7 +8,7 @@ const ContentMain = (props) => {
   return (
     <div className={classes.mainDiv}>
       <div className={classes.svgDiv} >
-        <p>Convert Images  to <span className={classes.highlight}>Text</span></p>
+        <p>Convert Images  <br/>to <br/><span className={classes.highlight}>Text</span></p>
         <div className={classes.svg}></div>
       </div>
       <div className={classes.getStarted}>
@@ -26,7 +26,7 @@ const ContentMain = (props) => {
       <Link className={classes.next}to="/text">Get Started</Link>
    
       </div>
-      <p>iuhiuh</p>
+      <p className={classes.clock}></p>
       </div>
     </div>
   );
