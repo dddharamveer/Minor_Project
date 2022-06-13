@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import SaveText from "../pages/SaveText";
 import classes from "./Navbar.module.css";
-import {AnimatePresence} from "framer-motion"
+import { AnimatePresence } from "framer-motion";
 const Navbar = (props) => {
   const [menuButton, setMenuButton] = useState(false);
   const [innerWidth, setinnerWidth] = useState(window.innerWidth);
-  const [textList, setTextList] = useState(false)
+  const [textList, setTextList] = useState(false);
 
   const innerHandler = () => {
     setinnerWidth(window.innerWidth);
@@ -19,10 +19,10 @@ const Navbar = (props) => {
   if (menuButton && innerWidth < 800) {
     links = classes["linksShow"];
   }
-  
-  const textlistHandler=()=>{
-   setTextList(prev=>!prev)
-  }
+
+  const textlistHandler = () => {
+    setTextList((prev) => !prev);
+  };
   return (
     <nav className={classes.navbar}>
       <div className={classes["logoDiv"]}>
@@ -30,33 +30,26 @@ const Navbar = (props) => {
           <p onClick={HandleMobileButton} className={classes.mobileIcon}></p>
         )}
         <Link className={classes.logo} to="/">
-          studio
+          gminacs
         </Link>
-        <div className={classes.textList}onClick={textlistHandler}></div>
-      
+        <div className={classes.textList} onClick={textlistHandler}></div>
       </div>
-     <AnimatePresence>
-      {textList &&  <SaveText close={textlistHandler}/>}
-      </AnimatePresence>
-      <div className={`${classes.links} ${links}` } onClick={HandleMobileButton}>
+
+      <div className={`${classes.links} ${links}`} onClick={HandleMobileButton}>
         <ul className={classes.linksList}>
-          <li>
-            <Link to="/about">about</Link>
-          </li>
-          <li>
-            <Link to="/">githib</Link>
-          </li>
-          
-          {/* <li>
-            <div className={classes.switchDiv}>
-              <input type="checkbox" id="switch" className={classes.switch} />
-              <label htmlFor="switch" className={classes.switch}>
-                Toggle
-              </label>
-            </div>
-          </li> */}
+          <Link className={classes.RouteLink} to="/about">
+            about
+          </Link>
+
+          <Link className={classes.RouteLink} to="/">
+            github
+          </Link>
         </ul>
+        
       </div>
+      <AnimatePresence>
+          {textList && <SaveText close={textlistHandler} />}
+        </AnimatePresence>
     </nav>
   );
 };

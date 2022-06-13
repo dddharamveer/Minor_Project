@@ -73,7 +73,7 @@
 }
 
 
-.linksList li {
+.linksList .RouteLink {
     display: grid;
 
     padding: 1.5rem;
@@ -81,11 +81,11 @@
 
 }
 
-.linksList li:hover {
+.linksList .RouteLink:hover {
     background-color: rgba(0, 0, 0, 0.205);
 }
 
-.linksList li a {
+.linksList .RouteLink {
     text-decoration: none;
     color: white;
     text-align: left;
@@ -206,13 +206,13 @@ input:checked+.switch:after {
         width: unset;
     }
 
-    .linksList li {
+    .linksList .RouteLink {
         background-color: unset;
 
     }
 
 
-    .linksList li a {
+    .linksList .RouteLink {
         text-align: center;
         color: black;
     }

@@ -19,6 +19,7 @@
 
 
 .mainDiv p {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   color: white;
   font-size: 1.5em;
@@ -37,6 +38,7 @@
 }
 
 .labelFile {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
 
   position: relative;
@@ -52,6 +54,7 @@
 }
 
 .next {
+  font-family: 'Poppins', sans-serif;
   display: grid;
   text-align: center;
   justify-self: center;
@@ -62,7 +65,7 @@
   font-size: 1.2rem;
   padding: 1em;
   background-color: #9772FB;
-  border-radius: 10px;
+  
 
 }
 
@@ -73,11 +76,12 @@
   font-family: "Light";
   color: black;
   font-size: 2.5rem;
-
+  word-spacing: 9999px;
 }
 
 .highlight {
   position: relative;
+
 
 }
 
@@ -101,4 +105,30 @@
   background-size: contain;
   background-repeat: no-repeat;
  margin-bottom: 1em;
+}
+
+@media screen and (min-width:800px) {
+  .mainDiv {
+    justify-content:unset;
+    
+  }
+  .svgDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+  }
+  .svgDiv p{
+    padding: 2em;
+    word-spacing: unset;
+    text-align: left;
+
+  }
+  .getStarted{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .Button{
+    grid-template-columns: 1fr 1fr;
+  }
 }

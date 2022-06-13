@@ -13,8 +13,9 @@ const SaveText = (props) => {
   return (
     <motion.div
       className={classes.text}
-      initial={{ x: window.innerWidth }}
+      initial={{ x: window.innerWidth  }}
       animate={{ x: 0 }}
+      transition={{ease:"anticipate",duration:.4}}
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <div className={classes.navbar} onClick={props.close}>
