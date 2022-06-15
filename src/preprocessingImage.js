@@ -3,8 +3,9 @@ function preprocessImage(canvas) {
   const image = ctx.getImageData(0,0,canvas.width, canvas.height);
   // blurARGB(image.data, canvas, 1);
   // dilate(image.data, canvas);
+  console.log(254^155);
   invertColors(image.data);
-  thresholdFilter(image.data, 0.5);
+  thresholdFilter(image.data, 0.3);
   return image;
  
   // const ctx = canvas.getContext('2d')
@@ -174,9 +175,12 @@ for (y = 0; y < height; y++) {
 setPixels(pixels, argb);
 }
 
+
 function invertColors(pixels) {
   for (var i = 0; i < pixels.length; i+= 4) {
+   
     pixels[i] = pixels[i] ^ 255; // Invert Red
+
     pixels[i+1] = pixels[i+1] ^ 255; // Invert Green
     pixels[i+2] = pixels[i+2] ^ 255; // Invert Blue
   }
@@ -273,9 +277,11 @@ function thresholdFilter(pixels, level) {
   const red = pixels[i];
   const green = pixels[i + 1];
   const blue = pixels[i + 2];
+ 
   const gray = 0.2126 * red + 0.7152 * green + 0.0722 * blue;
   let value;
-  if (gray >= thresh) {
+  // 127
+  if (gray >= thresh) { 
       value = 255;
   } else {
       value = 0;

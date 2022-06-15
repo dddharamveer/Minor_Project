@@ -41,9 +41,9 @@ const Navbar = (props) => {
             about
           </Link>
 
-          <Link className={classes.RouteLink} to="/">
+          <a className={classes.RouteLink} href="https://github.com/DharamveerG/Minor_Project">
             github
-          </Link>
+          </a>
           {innerWidth > 800 && <p  onClick={textlistHandler}>Saved Text</p>}
         </ul>
         
